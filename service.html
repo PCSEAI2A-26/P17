@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* SERVICES-BOX */
+
+.container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e5e2dd;
+  
+  }
+  
+  h1 {
+    margin-top: 15px;
+    font-size: 3rem;
+    color: #005d7a;
+    padding: 20px;
+    background: #e5e2dd;
+  }
+  
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+.service {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #005d7a;
+    border-radius: 25px;
+    
+  }
+  
+.service i {
+    margin-top: 10%;
+    color: #005d7a;
+    font-size: 60px;
+  }
+  
+.service h2 {
+    margin-top: 20px;
+    color: #005d7a;
+    font-size: 3rem;
+  }
+  
+.service p {
+    color: black;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+.service a {
+    color: #e5e2dd;
+    background-color: #005d7a;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.readmore {
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 2px solid #005d7a;
+    background-color: #005d7a;
+}
+.readmore:hover {
+    color: #5d98b4;
+    transform: scale(1.03);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+.service:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+/* ABOUT-SECTION */
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+  
+.content-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.about-img {
+    flex: 1;
+    margin-right: 30px;
+}
+  
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.text {
+    flex: 1;
+    border-radius: 15px;
+    background-color: #005d7a;
+    color: #e5e2dd;
+}
+.text h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #005d7a;
+    color: #e5e2dd;
+}
+.text p {
+    margin: 20px;
+}
+
+.text:hover {
+    transform: scale(1.09);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.readmore-about a {
+    width: 50%;
+    margin-left:25%;
+    margin-bottom: 10px;
+    color: #005d7a;
+    background-color: #e5e2dd;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.readmore-about a:hover {
+    transform: scale(1.09);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+      padding: 30px;
+    }
+  
+    .content-2 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="Services" class="container-2">                           <!--  ============SERVICE-CONTAINER================   -->
+        <h1>Our Service</h1>
+        <div class="row">
+            
+            <div class="service">
+                <i class="fa-solid fa-location-dot"></i>
+                <h2>Location</h2>
+                <p>Find your perfect spot effortlessly! 📍 Use our Location Page to discover accommodations tailored to your preferred area. Easy, precise, and stress-free. Welcome to seamless living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h2>Price</h2>
+                <p>Budget-friendly living starts here! 💰 Explore accommodations that align with your financial goals. Balancing comfort and cost has never been this simple. Welcome to affordable living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>   
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-bowl-food"></i>
+                <h2>Food</h2>
+                <p>Savor the experience! 🍽 Explore accommodations not just by cost, but by the quality and variety of dining options. Your perfect stay includes good food. Welcome to a tasty living!</p>
+                <div class="readmore"><a href="#">Read more</a></div> 
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-person-military-pointing"></i>
+                <h2>Security</h2>
+                <p>Peace of mind comes first! 🔐 Discover accommodations with top-notch security features. Your safety is our priority. Welcome to worry-free living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-regular fa-face-meh"></i>
+                <h2>Unaware</h2>
+                <p>Knowledge is key! 🌟 Navigate the accommodation search confidently with our insights. No more mysteries, just informed decisions. Welcome to clarity in living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-circle-info"></i>
+                <h2>Other</h2>
+                <p>Discover more, live better! ✨ Explore additional features that enhance your accommodation search. Tailor your experience to suit your unique needs. Welcome to personalized living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    input[type=text], input[type=email], input[type=tel], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    .container {
+      max-width: 700px;
+      margin: 5% auto;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .column {
+      width: 100%;
+      margin-top: 6px;
+    }
+    .drag-box {
+      border: 2px dashed #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 16px;
+    }
+    .drag-box:hover {
+      background-color: #f2f2f2;
+    }
+    .drop-box {
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      width: 100%;
+      height: 400px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 20px;
+      color: #ccc;
+      line-height: 200px;
+    }
+    .drop-box:hover {
+      border-color: #aaa;
+      color: #aaa;
+    }
+    .submit {
+      margin-top: 10px;
+      border: 2PX solid green;
+      border-radius: 20px;
+      height: 40px;
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Hostel Registration Form</h1>
+  <div class="container">
+    <form action="/register" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="column">
+          <label for="hostel-name">Hostel Name :</label>
+          <input type="text" id="hostel-name" name="hostel-name" placeholder="Enter hostel name" required>
+          <label for="hostel-address">Hostel Address :</label>
+          <textarea id="hostel-address" name="hostel-address" placeholder="Enter hostel address" required></textarea>
+          <label for="hostel-fees">Hostel Fees :</label>
+          <input type="text" id="hostel-fees" name="hostel-fees" placeholder="Enter hostel fees" required>
+          <label for="address">Hostel Name :</label>
+          <input type="text" id="address" name="address" placeholder="Enter your hostel address link " required>
+        </div>
+        <div class="column">
+          <label for="facilities">Facilities :</label>
+          <div class="column">
+            <input type="checkbox" id="24-7-security" name="24-7-security" value="24-7-security">
+            <label for="24-7-security">24/7 Security</label>
+            <input type="checkbox" id="24-7-electricity" name="24-7-electricity" value="24-7-electricity">
+            <label for="24-7-electricity">24/7 Electricity</label>
+            <input type="checkbox" id="24-7-water-supply" name="24-7-water-supply" value="24-7-water-supply">
+            <label for="24-7-water-supply">24/7 Water Supply</label>
+            <input type="checkbox" id="laundry" name="laundry" value="laundry">
+            <label for="laundry">Laundry</label>
+            <input type="checkbox" id="gym" name="gym" value="gym">
+            <label for="gym">Gym</label>
+          </div>
+          <div class="column">
+            <label for="mess-type">Mess :</label>
+            <input type="checkbox" id="Breakfast" name="Breakfast" value="Breakfast">
+            <label for="Breakfast">Breakfast</label>
+            <input type="checkbox" id="Lunch" name="Lunch" value="Lunch">
+            <label for="Lunch">Lunch</label>
+            <input type="checkbox" id="Dinner" name="Dinner" value="Dinner">
+            <label for="double-room">Dinner</label>
+          </div>
+          <div class="column">
+            <label for="room-type">Room Type :</label>
+            <input type="checkbox" id="single-room" name="single-room" value="single-room">
+            <label for="single-room">Single Room</label>
+            <input type="checkbox" id="double-room" name="double-room" value="double-room">
+            <label for="double-room">Double Room</label>
+          </div>
+          <div class="column">
+            <label for="hostel-type">Hostel Type :</label>
+            <input type="checkbox" id="boys-hostel" name="boys-hostel" value="boys-hostel">
+            <label for="boys-hostel">Boys Hostel</label>
+            <input type="checkbox" id="girls-hostel" name="girls-hostel" value="girls-hostel">
+            <label for="girls-hostel">Girls Hostel</label>
+          </div>
+          
+        </div>
+        <div class="column">
+          <div class="drag-box" ondragover="event.preventDefault()" ondrop="dropHandler(event)">
+            Drag and drop your image here or click to select an image.
+          </div>
+        </div>
+      </div>
+      <button class="submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <script>
+    function dropHandler(event) {
+      event.preventDefault();
+      const files = event.dataTransfer.files;
+      if (files.length === 0) {
+        return;
+      }
+      const file = files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = new Image();
+        img.src = e.target.result;
+        document.body.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+</html>
