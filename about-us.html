@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* ABOUT-SECTION */
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+  
+.content-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+  
+.about-img {
+    flex: 1;
+    margin-right: 30px;
+}
+  
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.text {
+    flex: 1;
+    border-radius: 15px;
+    background-color: #005d7a;
+    color: #e5e2dd;
+}
+.text h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #005d7a;
+    color: #e5e2dd;
+}
+.text p {
+    margin: 20px;
+}
+
+.text:hover {
+    transform: scale(1.09);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.readmore-about a {
+    width: 50%;
+    margin-left:25%;
+    margin-bottom: 10px;
+    color: #005d7a;
+    background-color: #e5e2dd;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.readmore-about a:hover {
+    transform: scale(1.09);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+      padding: 30px;
+    }
+  
+    .content-2 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="About-Us" class="about-us">                                       <!--ABOUT-SECCTION -->
+        <div class="content-2">
+            <div class="about-img">
+                <img src="programmer.png" alt="about-us">
+            </div>
+            <div class="text">
+               <h1>About Us</h1>
+               <p>We are a team of passionate developers who love to create amazing websites and applications. We are in 2nd year student and we have worked with clients from various domains and sectors. We believe in delivering quality work and exceeding expectations.
+               Our mission is to provide innovative and user-friendly solutions that solve real-world problems and enhance user experience. We use the latest technologies and best practices to ensure that our products are reliable, secure, and scalable. We also value feedback and collaboration, and we are always eager to learn and improve.
+               If you want to know more about us or our services, please feel free to contact us. We would love to hear from you and discuss your project needs.</p> 
+               <div class="readmore-about"><a href="">Read more</a></div> 
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

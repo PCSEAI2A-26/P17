@@ -1,0 +1,368 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Google Sans Regular";
+  /* box-sizing: border-box; */
+}
+
+
+
+body {
+  background : #e5e2dd;   
+}
+
+/* =================NAV-BAR==================== */
+
+header {
+  width: 95%;
+  height: 80px;
+  background-color: #005d7a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  position: fixed;
+}
+
+.logo{
+  font-size: 28px;
+  font-weight: bold;
+  color: #e5e2dd;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: #e5e2dd;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+  color: #005d7a;
+  background-color: #e5e2dd;
+}
+
+.nav-bar ul li a.active {
+  color: #005d7a;
+  background: #e5e2dd;
+}
+@media only screen and (max-width: 1320px) {
+  header{
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header{
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #e5e2dd;
+    margin: 6px 0;
+  }
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vh; 
+    background: #005d7a;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 550px;
+    width:100% ;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }    
+  .nav-bar.active ul {
+      opacity: 1;
+  }
+  .nav-bar ul li a {
+   margin-bottom: 12px;
+  }
+}
+/* ==========sidebar============== */
+
+.sidebar {
+  margin: 10px;
+  margin-top: 90px;
+  height: 490px;
+  width: 200px;
+  position: fixed;
+  z-index: 0px;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: #005d7a;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+.sidebar a {
+  margin-left: 10px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #e5e2dd;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #005d7a;
+  border-radius: 20px;
+  background-color: #e5e2dd;
+  display: inline;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    margin-top: 0px;
+    width: 25%;
+    height: 600px;
+    position: relative;
+  }
+  .sidebar a {
+    float: none;
+    margin-top: 1rem;
+    display: block;
+    text-align: left;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
+
+/* ================search-bar================== */
+.search-container {
+  padding: 10px;
+  padding-top:90px;
+  margin-left: 250px;
+  display: flex;
+  justify-content: center;
+}
+.search-container input[type=text] {
+  padding: 10px;
+  border: none;
+  border:1px solid #005d7a ;
+  border-radius: 20px 0 0 20px;
+  width: 60%;
+  height: 20px;
+  font-size: 17px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+  
+.search-container button {
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #005d7a;
+  color: white;
+  height: 41px;
+  width: 15%;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  
+}
+
+.search-container input:hover {
+  border: 1.5px solid #005d7a;
+  display: flex;
+  box-shadow:  4px 4px 4px rgba(0,0,0.4);
+} 
+.search-container button:hover {
+  border: 1.5px solid #005d7a;
+  box-shadow:  4px 4px 4px rgba(0,0,0.4);
+
+}
+  
+@media screen and (max-width: 600px) {
+  .search-container {
+    flex-direction: row;
+  }
+  
+  .search-container input[type=text], .search-container button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
+
+/* ====================content-part=========================== */
+
+.hostel-list {
+  padding: 20px;
+  margin-left: 250px;
+  height: auto;
+  width: 905px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background: #005d7a;
+  gap: 1rem;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+
+
+.card {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e5e2dd;
+  color: #005d7a;
+  transition: 0.3s;
+  width: 270px;
+  height: 270px;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.container {
+  padding: 2px 16px;
+
+}
+
+img {
+  border-radius: 5px;
+  width: 270px;
+  height: 150px;
+  object-fit: cover;
+  /* background-size: cover; */
+}
+
+.star-rating {
+  color: orange;
+  /* margin-left: 150px;
+  padding-bottom: -100px; */
+}
+.star-rating:hover {
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #005d7a;
+  border-radius: 50%;
+  border: none;
+  color: #e5e2dd;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+} 
+.more-button {
+  background-color: #005d7a;
+  border-radius: 50%;
+  border: none;
+  color: #e5e2dd;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 2px 2px 0px 0px;
+  cursor: pointer;
+  border-radius: 20px;
+}  
+.book-button{
+  margin-left:100px ;
+  background-color: #005d7a;
+  border-radius: 50%;
+  border: none;
+  color: #e5e2dd;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.book-button a {
+  color: #ddd;
+}
+
+/* ============jump page=============== */
+
+.pagination {
+  padding: 20px;
+  margin-left:200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius:100px;
+  transition: 0.3s;
+  border: 1.5px solid #005d7a;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #005d7a;
+  color: white;
+  border: 1px solid #005d7a;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #005d7a;
+  color: #ddd;
+}
+
+

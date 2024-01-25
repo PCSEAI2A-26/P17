@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostelhub.in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Hostelhub.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> 𝙷𝙾𝚂𝚃𝙴𝙻𝙷𝚄𝙱 </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">                     <!--  NAV-BAR -->
+            <ul>
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#Services" class="">Service</a>
+                </li>
+                <li>
+                    <a href="#About-Us" class="">About Us</a>
+                </li>
+                <li>
+                    <a href="#Contact Us" class="">Contact Us</a>
+                </li>
+                <li>
+                    <a href="login.html" class="">Login</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() 
+        {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>   
+
+    <main>                                                            <!-- ================MAIN-CONTENT============== -->
+        <div class="container">
+            <img src="hostel-l-img.webp" alt="imz" class="rroom-img">
+            <div class="hero-text">
+                <h1>The Best way 
+                    to find your 
+                    next HOME</h1>
+                <P>Discover the perfect blend of comfort and convenience with HostelHub! 🌟 Explore our user-friendly platform designed to simplify your hostel search. Whether it's precise location searches, budget-friendly options, delightful dining experiences, or top-notch security – HostelHub has you covered!</P>
+                <button><a href="content.html">Get Started  </a> </button>
+            </div>
+        </div>
+    </main>
+
+    <div id="Services" class="container-2">                           <!--  ============SERVICE-CONTAINER================   -->
+        <h1>Our Service</h1>
+        <div class="row">
+            
+            <div class="service">
+                <i class="fa-solid fa-location-dot"></i>
+                <h2>Location</h2>
+                <p>Find your perfect spot effortlessly! 📍 Use our Location Page to discover accommodations tailored to your preferred area. Easy, precise, and stress-free. Welcome to seamless living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h2>Price</h2>
+                <p>Budget-friendly living starts here! 💰 Explore accommodations that align with your financial goals. Balancing comfort and cost has never been this simple. Welcome to affordable living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>   
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-bowl-food"></i>
+                <h2>Food</h2>
+                <p>Savor the experience! 🍽 Explore accommodations not just by cost, but by the quality and variety of dining options. Your perfect stay includes good food. Welcome to a tasty living!</p>
+                <div class="readmore"><a href="#">Read more</a></div> 
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-person-military-pointing"></i>
+                <h2>Security</h2>
+                <p>Peace of mind comes first! 🔐 Discover accommodations with top-notch security features. Your safety is our priority. Welcome to worry-free living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-regular fa-face-meh"></i>
+                <h2>Unaware</h2>
+                <p>Knowledge is key! 🌟 Navigate the accommodation search confidently with our insights. No more mysteries, just informed decisions. Welcome to clarity in living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+            
+            <div class="service">
+                <i class="fa-solid fa-circle-info"></i>
+                <h2>Other</h2>
+                <p>Discover more, live better! ✨ Explore additional features that enhance your accommodation search. Tailor your experience to suit your unique needs. Welcome to personalized living!</p>
+                <div class="readmore"><a href="#">Read more</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="About-Us" class="about-us">                                       <!--ABOUT-SECCTION -->
+        <div class="content-2">
+            <div class="about-img">
+                <img src="programmer.png" alt="about-us">
+            </div>
+            <div class="text">
+               <h1>About Us</h1>
+               <p>We are a team of passionate developers who love to create amazing websites and applications. We are in 2nd year student and we have worked with clients from various domains and sectors. We believe in delivering quality work and exceeding expectations.
+               Our mission is to provide innovative and user-friendly solutions that solve real-world problems and enhance user experience. We use the latest technologies and best practices to ensure that our products are reliable, secure, and scalable. We also value feedback and collaboration, and we are always eager to learn and improve.
+               If you want to know more about us or our services, please feel free to contact us. We would love to hear from you and discuss your project needs.</p> 
+               <div class="readmore-about"><a href="">Read more</a></div> 
+            </div>    
+        </div>
+    </div>
+
+    <div id="Contact Us" class="contact">
+        <div class="container-3">
+            <h1>Contact Us</h1>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name">
+                        </div> 
+
+                        <div class="form-group">
+                            <input type="email" name="name" placeholder="Your email">
+                        </div> 
+
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                        
+                        <button type="sumbit">Send Message</button>
+    
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fa-solid fa-phone"></i> +1 123 456 789</p>
+                    <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> 123 street,city,country</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer> 
+        <div class="footer-container">
+            <div class="social-icon">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Services">Service</a></li>
+                <li><a href="#About-Us">About Us</a></li>
+                <li><a href="#Contact Us">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="foot-panel">
+            <p><a href="#">Hostelhub.in</a></p>
+         </div>
+    </footer>
+</body>
+</html>
+
+
+
